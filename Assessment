@@ -1,0 +1,25 @@
+Create table incubyte(customerName varchar(255) primary key,customerid varchar(18) not null,
+customeropendate date(8) not null,lastconsulteddate date(8),vaccinationtype char(5),doctorconsulted char(255),
+state char(5),country char(5),postcode int(5),dateofbirth date(8),activecustomer char(1))
+
+java program to read file data using File reader class:
+
+import java.io.*;
+
+Public class incubyte
+{
+public static void main(String[] args) throws Exception
+{
+FileReader fr=new FileReader("filepath");
+
+int i;
+
+while((i=fr.read())!=-1)
+
+System.out.println((char)i);
+}
+}
+
+iii.All customers related to India will go to Table_India
+
+Create table Table_India as select * from incubyte where country='India'
